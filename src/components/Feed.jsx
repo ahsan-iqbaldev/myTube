@@ -12,9 +12,10 @@ const Feed = () => {
   useEffect(() => {
     setVideos(null);
 
-    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
-      .then((data) => setVideos(data.items))
-    }, [selectedCategory]);
+    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) =>
+      setVideos(data.items)
+    );
+  }, [selectedCategory]);
 
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
@@ -35,7 +36,7 @@ const Feed = () => {
           variant="body2"
           sx={{ mt: 1.5, color: "#fff" }}
         >
-          Copyright © 2022 JSM Media
+          Copyright © 2024 Reven Solutions
         </Typography>
       </Box>
 
